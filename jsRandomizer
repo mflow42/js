@@ -1,8 +1,8 @@
 /* Рандомайзер слов из указанного набора символов */
-var arr = ['n','i','k', 'o', 'l', 'a', 'y', 'b', 'u', 't'];
+var arr = ['j','o','e', 'b', 'l', 'a', 'c', 'k'];
 function compareRandom(a, b) {
   return Math.random() - 0.5;
 }
 arr.sort(compareRandom);
 var arr2 = arr.join('');
-console.log(arr2); // элементы в случайном порядке, например [inkoyabltu]
+console.log(arr2); // элементы в случайном порядке, например [objeclak]
