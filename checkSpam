@@ -1,4 +1,4 @@
-checkSpam = function(str) {
+var checkSpam = function(str) {
     str == "viagra" ? console.log("XXX") : console.log(str);
 }
 
