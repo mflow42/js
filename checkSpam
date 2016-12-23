@@ -1,0 +1,5 @@
+checkSpam = function(str) {
+    str == "viagra" ? console.log("XXX") : console.log(str);
+}
+
+checkSpam("viagra");
