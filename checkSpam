@@ -9,7 +9,7 @@ checkSpam("innocent rabbit") == false
 */
 
 var checkSpam = function(str) {
-    str.toLowerCase() == "viagra" ? console.log("XXX") : console.log(str);
+    str.toLowerCase() == "viagra" || str.toLowerCase() == "xxx" ? console.log("XXX") : console.log(str);
 }
 
 checkSpam("viagra");
