@@ -1,8 +1,9 @@
 /* Рандомайзер слов из указанного набора символов */
-var arr = ['j','o','e', 'b', 'l', 'a', 'c', 'k'];
-function compareRandom(a, b) {
-  return Math.random() - 0.5;
+var randWord = function(word) {
+    function compareRandom(a, b) {
+      return Math.random() - 0.5;
+    }
+    word = word.split("").sort(compareRandom).join('');
+    console.log(word); // элементы в случайном порядке, например [objeclak]
 }
-arr.sort(compareRandom);
-var arr2 = arr.join('');
-console.log(arr2); // элементы в случайном порядке, например [objeclak]
+randWord("joeblack");
