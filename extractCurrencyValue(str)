@@ -1,0 +1,16 @@
+/*
+Есть стоимость в виде строки: "$120". То есть, первым идёт знак валюты, а затем – число.
+
+Создайте функцию extractCurrencyValue(str), которая будет из такой строки выделять число-значение, в данном случае 120.
+*/
+
+var extractCurrencyValue = function(str) {
+    if (str[0] == "$") {
+        str = str.substr(1);
+        console.log(str);
+    }
+    else console.log(str);
+}
+
+extractCurrencyValue("$120");
+extractCurrencyValue("120");
