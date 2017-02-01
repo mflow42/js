@@ -1,0 +1,4 @@
+function getExtension(file) {
+    var parts = parts.split(".");
+    return parts[parts.length - 1];
+}
