@@ -1,0 +1,10 @@
+var sum = 0;
+
+while (true) {
+
+  var value = +prompt("Введите число", '');
+  console.log(value);
+  if (!value) break; // (*)
+  sum += value;
+}
+console.log( 'Сумма: ' + sum );
