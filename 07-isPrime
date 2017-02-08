@@ -1,0 +1,20 @@
+// Поиск простых чисел
+
+function isPrime(n) {
+    n = prompt("Введите число (верхний предел) для поиска простых чисел");
+    p = prompt("Введите порядковый номер простого числа, который необходимо вывести");
+    var arr = [], i, j, primes = [];
+    for (i = 2; i <= n; ++i) {
+        if (!arr[i]) {
+            primes.push(i);
+            for (j = i << 1; j <= n; j += i) {
+                arr[j] = true;
+            }
+        }
+    }
+    pCorr = parseInt(p) - 1;
+    console.log(p);
+    console.log(primes);
+    console.log(primes[pCorr]);
+}
+isPrime()
