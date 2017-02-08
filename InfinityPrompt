@@ -1,0 +1,14 @@
+for (var i = 0; i < 3; i++) {
+  console.log( "номер " + i + "!" );
+}
+var i = 0;
+while (i < 3) {
+  console.log( "номер " + i + "!" );
+  i++;
+}
+var ask = 1;
+while(ask) {
+    var answer = prompt("Введите число больше 100");
+    console.log(answer);
+    if (answer > 100 || answer == null || answer == "") break;
+}
