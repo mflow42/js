@@ -6,5 +6,5 @@
 Напишите код для получения последнего элемента goods.
 */
 var goods = ['milk', 'cream', 'ice'];
-var lastMassiveItem = goods[goods.length - 1]
-console.log(lastMassiveItem);
+var lastArrayItem = goods[goods.length - 1]
+console.log(lastArrayItem);
