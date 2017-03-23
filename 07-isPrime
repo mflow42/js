@@ -6,7 +6,7 @@ function isPrime(n) {
     var arr = [], i, j, primes = [1];
     for (i = 2; i <= n; ++i) {
         if (!arr[i]) {
-            primes[primes.length] = i;
+            primes.push(i);
             for (j = i << 1; j <= n; j += i) {
                 arr[j] = true;
             }
