@@ -14,9 +14,10 @@ var newArr = [];
 function filterRange(arr, a , b) {
     for (var i = 0; i < arr.length; i++) {
         if (arr[i] >= a && arr[i] <= b) {
-            newArr[i] = arr[i];
+            newArr.push(arr[i]);
         }
     }
+    return newArr;
 }
 var arr = [5, 4, 3, 8, 0];
 filterRange(arr, 3, 5);
