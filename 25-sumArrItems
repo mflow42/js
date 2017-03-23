@@ -21,3 +21,19 @@ for (var i = 0; i < numbers.length; i++) {
 }
 
 console.log( sum );
+
+///другой вариант решения
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+function sumNumb() {
+    var userNumb = prompt("Введите число");
+    var sum = 0;
+    while (isNumeric(userNumb)) {
+        sum += +userNumb;
+        userNumb = prompt("Введите число");
+    }
+    console.log(sum);
+}
+sumNumb();
