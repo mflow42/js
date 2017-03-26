@@ -1,0 +1,49 @@
+/*
+На входе массив чисел, например: arr = [1, -2, 3, 4, -9, 6].
+
+Задача – найти непрерывный подмассив arr, сумма элементов которого максимальна.
+
+Ваша функция должна возвращать только эту сумму.
+
+Например:
+
+getMaxSubSum([-1, 2, 3, -9]) = 5 (сумма выделенных) //(2, 3)
+getMaxSubSum([2, -1, 2, 3, -9]) = 6 //(2, -1, 2, 3)
+getMaxSubSum([-1, 2, 3, -9, 11]) = 11 //(11)
+getMaxSubSum([-2, -1, 1, 2]) = 3 //(1, 2)
+getMaxSubSum([100, -9, 2, -3, 5]) = 100 //(100)
+getMaxSubSum([1, 2, 3]) = 6 (неотрицательные - берем всех) //(1, 2, 3)
+
+Если все элементы отрицательные, то не берём ни одного элемента и считаем сумму равной нулю:
+
+getMaxSubSum([-1, -2, -3]) = 0
+Постарайтесь придумать решение, которое работает за O(n2), а лучше за O(n) операций.
+*/
+/*
+function getMaxSubSum(arr) {
+    var maxSum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        var interimSum = 0;
+        for (var j = i; j < arr.length; j++) {
+            interimSum += arr[j];
+            console.log('interimSum: '+ interimSum);
+            maxSum = Math.max(maxSum, interimSum);
+            console.log('maxSum: '+ maxSum);
+        }
+    }
+    //console.log(maxSum);
+}
+*/
+
+function getMaxSubSum(arr) {
+    var maxSum = 0, interimSum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        interimSum += arr[i];
+        maxSum = Math.max(maxSum, interimSum);
+        if (interimSum < 0) interimSum = 0;
+        //console.log(interimSum);
+    }
+    console.log(maxSum);
+}
+
+getMaxSubSum([-1, 2, 3, -9, 3]);
