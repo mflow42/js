@@ -15,21 +15,13 @@ camelize("-webkit-transition") == 'WebkitTransition';
 P.S. Вам пригодятся методы строк charAt, split и toUpperCase.
 */
 function camelize(str) {
-    var newStr = str ? str.split("-") : [];
-    var result = [];
-    for(var i = 0; i < newStr.length; i++) {
-        var interim;
-        if (i === 0) {
-            interim = newStr[i].charAt(0) + newStr[i].slice(1);
-            result.push(interim);
-        } else {
-        interim = newStr[i].charAt(0).toUpperCase() + newStr[i].slice(1);
-        result.push(interim);
-        }
+    var arr = str ? str.split("-") : [];
+    for (var i = 1; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
     }
-    newStr = result.join("");
-    console.log(newStr);
-    return newStr;
+    arr = arr.join("");
+    console.log(arr);
+    return arr;
 }
 camelize("background-color");
 camelize("list-style-image");
