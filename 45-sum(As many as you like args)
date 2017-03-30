@@ -1,0 +1,26 @@
+/*
+Сумма аргументов
+важность: 5
+Напишите функцию sum(...), которая возвращает сумму всех своих аргументов:
+
+sum() = 0
+sum(1) = 1
+sum(1, 2) = 3
+sum(1, 2, 3) = 6
+sum(1, 2, 3, 4) = 10
+*/
+
+function sum() {
+    var result = 0;
+    
+    for (var i = 0; i < arguments.length; i++) {
+        result += arguments[i];
+    }
+    console.log(result);
+}
+ 
+sum();
+sum(1);
+sum(1, 2);
+sum(1, 2, 3);
+sum(1, 2, 3, 4);
