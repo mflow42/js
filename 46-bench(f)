@@ -1,0 +1,25 @@
+var arr = [];
+for (var i = 0; i < 1000; i++) arr[i] = 0;
+
+function walkIn(arr) {
+  for (var key in arr) arr[key]++;
+}
+
+function walkLength(arr) {
+  for (var i = 0; i < arr.length; i++) arr[i]++;
+}
+
+function walkWhileDesc(arr) {
+  var i = arr.length;
+  while (i) i--;
+}
+
+function bench(f) {
+  var date = new Date();
+  for (var i = 0; i < 100000; i++) f(arr);
+  return new Date() - date;
+}
+
+console.log( 'Время walkIn: ' + bench(walkIn) + 'мс' );
+console.log( 'Время walkLength: ' + bench(walkLength) + 'мс' );
+console.log( 'Время walkWhileDesc: ' + bench(walkWhileDesc) + 'мс' );
