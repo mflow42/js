@@ -1,0 +1,24 @@
+/*
+Каков будет результат выполнения этого кода?
+Изменится ли внешняя переменная value ?
+P.S. Какими будут ответы, если из строки var value = false убрать var?
+*/
+
+var value = 0;
+
+function f() {
+  if (1) {
+    console.log('1 вызов: ' + value);
+    value = true;
+    console.log('2 вызов: ' + value);
+  } else {
+    console.log('3 вызов: ' + value);
+    var value = false;
+    console.log('4 вызов: ' + value);
+  }
+
+  alert( value );
+}
+console.log('5 вызов: ' + value);
+f();
+console.log('6 вызов: ' + value);
