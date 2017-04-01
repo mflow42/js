@@ -1,0 +1,16 @@
+function marry(man, woman) {
+  woman.husband = man;
+  man.wife = woman;
+
+  return {
+    father: man,
+    mother: woman
+  }
+}
+
+var family = marry("Василий", "Мария");
+console.log(family);
+var family = marry({name: "Василий"}, {name: "Мария"});
+console.log(family);
+window.family = null;
+console.log(family);
