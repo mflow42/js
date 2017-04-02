@@ -1,0 +1,9 @@
+function f() {
+  var value = Math.random();
+
+  return function() {};
+}
+
+// 3 функции, каждая ссылается на свой объект переменных,
+// каждый со своим значением value
+var arr = [f(), f(), f()];
