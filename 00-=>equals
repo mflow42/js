@@ -1,0 +1,5 @@
+var sumOld = function sum(n) {return n + n};
+console.log(sumOld(3));
+
+const sumNew = n => n + n;
+console.log(sumNew(2));
