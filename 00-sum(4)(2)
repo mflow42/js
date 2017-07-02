@@ -19,3 +19,10 @@ let sum = (a) => {
     };
 }
 console.log(sum(4)(9));
+
+let sum = a => {
+    return b => {
+        return a + b;
+    };
+}
+console.log(sum(4)(9));
