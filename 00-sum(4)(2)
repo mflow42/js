@@ -4,15 +4,18 @@ function sum(a) {
         return a + b;
     }
 }
-
 console.log(sum(4)(2));
-
-
 
 function sum(a) {
     return function(b) {
         return a + b;
     };
 }
-
 console.log(sum(8)(9));
+
+let sum = (a) => {
+    return (b) => {
+        return a + b;
+    };
+}
+console.log(sum(4)(9));
