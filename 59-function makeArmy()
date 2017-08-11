@@ -68,3 +68,25 @@ var army = makeArmy();
 
 army[4](); // 0
 army[3](); // 1
+
+
+//////////////////
+
+function makeArmy() {
+  let shooters = [];
+  for (i = 0; i < 11; i++) {
+    let shooter = () => {
+      console.log(shooter.i);
+    }
+    shooter.i = i;
+    shooters.push(shooter);
+  }
+  return shooters;
+}
+
+let army = makeArmy();
+
+army[0]();
+army[6]();
+army[1]();
+army[10]();
