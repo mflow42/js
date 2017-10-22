@@ -25,4 +25,8 @@ let sum = a => {
         return a + b;
     };
 }
+
 console.log(sum(4)(9));
+
+let sum2 = a => b => a + b;
+console.log(sum2(5)(6));
